@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>答案之书</title>
+<style>
+  body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #question {
+    width: 100px;
+    padding: 10px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  #answer {
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #ddd;
+    }
+    
+</style>
+</head>
+<body>
+
+<h1>答案之书</h1>
+
+<input type="text" id="question" placeholder="输入你的问题..." />
+
+<button class="button" onclick="getAnswer()">提交问题</button>
+
+<div id="answer"></div>
+
+<script>
+  function getAnswer() {
+    var question = document.getElementById('question').value;
+    var answerElement = document.getElementById('answer');
+    var answers = ['是', '否', '可能','确实','肯定假的','当然真的','反正我不信','去做吧','一切皆有可能','大概','不是','你再问一次吧','去试试','我不知道'];
+
+    // 这里可以添加更复杂的逻辑来根据问题给出答案
+    // 目前我们只是随机选择一个答案
+    var answer = answers[Math.floor(Math.random() * answers.length)];
+
+    answerElement.textContent = answer;
+  }
+</script>
+
+</body>
+</html>
+
