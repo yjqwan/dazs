@@ -12,7 +12,7 @@
   }
 
   #question {
-    width: 100px;
+    width: 125px;
     padding: 10px;
     margin: 20px auto;
     border: 1px solid #ddd;
@@ -34,6 +34,7 @@
     border-radius: 5px;
     background-color: #f4f4f4;
     cursor: pointer;
+    font-size:20px;
   }
 
   .button:hover {
@@ -44,11 +45,11 @@
 </head>
 <body>
 
-<h1>答案之书</h1>
+<h1>答案之书📚</h1>
 
-<input type="text" id="question" placeholder="输入你的问题..." />
+<input type="text" id="question" placeholder="输入你的问题🤷‍♂️..." />
 
-<button class="button" onclick="getAnswer()">提交问题</button>
+<button class="button" onclick="getAnswer()">提交问题🤲</button>
 
 <div id="answer"></div>
 
@@ -56,7 +57,7 @@
   function getAnswer() {
     var question = document.getElementById('question').value;
     var answerElement = document.getElementById('answer');
-    var answers = ['是', '否', '可能','确实','肯定假的','当然真的','反正我不信','去做吧','一切皆有可能','大概','不是','你再问一次吧','去试试','我不知道'];
+    var answers = ['是💩', '否🤢', '可能🧐','确实💩','肯定假的🤗','当然真的😊','反正我不信🤨','去做吧🤓','一切皆有可能😁','大概🤔','不是🤫','你再问一次吧🤔','去试试😲','我不知道😑'];
 
     // 这里可以添加更复杂的逻辑来根据问题给出答案
     // 目前我们只是随机选择一个答案
@@ -68,4 +69,3 @@
 
 </body>
 </html>
-
